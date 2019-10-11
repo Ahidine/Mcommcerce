@@ -119,6 +119,13 @@ public class ProductController {
     	return ListeMarges;
     	
     }
+    @GetMapping(value = "/ProduitsByOrder")
+    public List<Product> trierProduitsParOrdreAlphabetique()
+    {
+    	List<Product> ListeProduitsTrier= this.productDao.findByOrderByNom();
+    	
+    	return ListeProduitsTrier;
+    }
 
 
 
