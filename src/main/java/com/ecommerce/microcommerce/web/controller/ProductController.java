@@ -70,7 +70,7 @@ public class ProductController {
     //ajouter un produit
     @PostMapping(value = "/Produits")
 
-    public ResponseEntity<Void> ajouterProduit( @RequestBody Product product) {
+    public ResponseEntity<Void> ajouterProduit(@RequestBody Product product) {
     	System.out.println("Prix : "+product.getPrix());
         if(product.getPrix()==0)
        	 throw new ProduitGratuitException("le prix d'achat ne peut pas etre egale a 0");
